@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><link rel="preload" as="font" type="font/woff2" crossorigin href="assets/f4ded9b354.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="assets/e5841801aa.woff2"><link as="image" fetchpriority="high" imagesizes="100vw" imagesrcset="assets/41ddd16fbd-640.webp 640w, assets/41ddd16fbd-1024.webp 1024w, assets/41ddd16fbd-1600.webp 1600w" rel="preload"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Conexão · Reencontro Halleluya Rio</title><meta content="A festa que nunca acaba perto de você. Conexão, o reencontro do Halleluya Rio, 31 de outubro e 1º de novembro nos Centros de Evangelização Shalom. Entrada gratuita." name="description"/><link href="assets/c1db2555a8.png" rel="icon"/><style>/* ============================================================
+   FESTIVAL HALLELUYA — DESIGN TOKENS
+   Fonte da verdade: Manual da Marca Oficial (28p) + IDV 2026
+   Tipografia: Fivo Sans (SIL OFL) — assets/fonts/OFL.txt
+   ============================================================ */
+
+@font-face{font-family:'Fivo Sans';src:url("assets/8543d93688.woff2")   format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Fivo Sans';src:url("assets/5657f5dca0.woff2") format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Fivo Sans';src:url("assets/647e725b12.woff2")  format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Fivo Sans';src:url("assets/e5841801aa.woff2")    format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Fivo Sans';src:url("assets/2814918868.woff2")   format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Fivo Sans';src:url("assets/f4ded9b354.woff2")   format('woff2');font-weight:900;font-style:normal;font-display:swap}
+
+:root{
+  /* ---------- MARCA ---------- */
+  --hly-black:#0A0A0A;           /* base dark-first do sistema */
+  --hly-true-black:#000000;       /* preto de impressão / logo positiva */
+  --hly-white:#FFFFFF;
+  --hly-gold:#FFD178;             /* acento — amostrado dos stickers oficiais */
+  --hly-gold-strong:#FFC045;
+  --hly-gold-soft:#FFE0A3;
+
+  /* ---------- CAMPANHA 2026 — PALETA OFICIAL ----------
+     Fonte: "Nossa Paleta.png" (19/09/2026). Nove valores chapados.
+     Aqui o petroleo e o AMBIENTE (fundo) e o branco e o primeiro plano —
+     o oposto da logica preto+ouro de 2024.                              */
+  --c26-petroleo-vivo:#088DBA;   /* branco em cima: 3.80 — so texto grande */
+  --c26-petroleo:#0B5C77;        /* branco em cima: 7.47  AAA — fundo padrao */
+  --c26-petroleo-escuro:#133B47; /* branco em cima: 12.04 AAA */
+  --c26-ciano:#55C3DE;           /* preto em cima: 9.66 AAA — realce */
+  --c26-areia-clara:#FAF4E6;     /* preto em cima: 18.05 AAA — fundo claro */
+  --c26-areia:#F1E6C6;
+  --c26-dourado-claro:#FBE8C0;
+  --c26-verde-pedra:#607B72;
+  --c26-cinza-azulado:#ADB9B7;
+
+  /* ---------- NEUTROS ---------- */
+  --ink-950:#000000; --ink-900:#0A0A0A; --ink-850:#121212; --ink-800:#1A1A1A;
+  --ink-700:#262626; --ink-600:#3A3A3A; --ink-500:#565656; --ink-400:#7A7A7A;
+  --ink-300:#A3A3A3; --ink-200:#C9C9C9; --ink-100:#E6E6E6; --ink-050:#F4F3F0;
+
+  /* ---------- SUBMARCAS (hex oficial do manual) ----------
+     ATENÇÃO: o hex oficial é a cor canônica (impressão, fills, logo).
+     Para TEXTO sobre fundo escuro use o token -on-dark: os oficiais
+     não atingem 4.5:1 em preto. Números medidos vs #0A0A0A.        */
+
+  /* Solidário — terracota do ARQUIVO OFICIAL DA LOGO (HALLELUYA SOLIDÁRIO - LOGO.psd),
+     medido na faixa do lockup. Substitui o #E10600 do manual 2024.
+     A identidade do Solidário é um DEGRADÊ QUENTE, não um chapado: as peças de 2026
+     varrem laranja 23° -> vermelho 0-6° -> magenta 342-348°. O terracota é o ponto
+     canônico para chapado, selo e impressão; o degradê está logo abaixo. */
+  --sub-solidario:#BF5820;           /* branco em cima: 4.53:1 AA */
+  --sub-solidario-on-dark:#C75C21;   /* 4.70:1 em #0A0A0A  AA */
+  --sub-solidario-300:#D98D63;       /* 7.49:1 em #0A0A0A  AAA */
+  --sub-solidario-700:#73320E;       /* branco em cima: 9.58:1 AAA */
+  /* Pontas do degradê, amostradas das peças de 2026 (feed e convite). */
+  --sub-solidario-grad-de:#E5691D;   /* laranja 23° */
+  --sub-solidario-grad-ate:#CE1059;  /* magenta 337° */
+  --sub-solidario-gradiente:linear-gradient(105deg,var(--sub-solidario-grad-de),var(--sub-solidario-grad-ate));
+
+  /* Espaço PCD — oficial 2.31:1 em preto (REPROVA para texto) */
+  --sub-pcd:#004C92;
+  --sub-pcd-on-dark:#40A4FF;         /* 7.52:1  AAA */
+  --sub-pcd-400:#0386FF;             /* 5.52:1  AA */
+  --sub-pcd-700:#001C36;
+
+  /* Sustentabilidade — oficial já passa AA em preto */
+  --sub-sustentabilidade:#03A63C;    /* 6.15:1  AA */
+  --sub-sustentabilidade-on-dark:#03A63C;
+  --sub-sustentabilidade-300:#5AFC93;
+  --sub-sustentabilidade-700:#014C1B;
+
+  /* ---------- SEMÂNTICO (tema escuro = padrão) ---------- */
+  --bg:var(--hly-black);
+  --bg-elev:var(--ink-850);
+  --bg-elev-2:var(--ink-800);
+  --surface-line:var(--ink-700);
+  --fg:var(--hly-white);
+  --fg-muted:var(--ink-300);
+  --fg-subtle:var(--ink-400);
+  --accent:var(--hly-gold);
+  --accent-fg:var(--hly-black);
+  --focus:var(--hly-gold);
+
+  --ok:#03A63C; --ok-on-dark:#3FD870;
+  --warn:#FFC045; --warn-on-dark:#FFC045;
+  /* --danger mantem o vermelho #E10600: e cor de ERRO, nao tem mais relacao
+     com a submarca Solidario, que passou ao terracota. */
+  --danger:#E10600; --danger-on-dark:#FF5752;
+  --info:#0386FF; --info-on-dark:#40A4FF;
+
+  /* ---------- TIPOGRAFIA ---------- */
+  --font-brand:'Fivo Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --fs-3xs:.6875rem; --fs-2xs:.75rem; --fs-xs:.8125rem; --fs-sm:.875rem;
+  --fs-md:1rem;      --fs-lg:1.125rem; --fs-xl:1.375rem; --fs-2xl:1.75rem;
+  --fs-3xl:2.25rem;  --fs-4xl:3rem;    --fs-5xl:4rem;    --fs-6xl:5.5rem;
+  --lh-tight:1.05; --lh-snug:1.2; --lh-normal:1.5; --lh-loose:1.7;
+  --tr-tight:-.02em; --tr-normal:0; --tr-wide:.06em; --tr-wider:.18em;
+  --fw-light:300; --fw-regular:400; --fw-medium:500;
+  --fw-bold:700;  --fw-heavy:800;   --fw-black:900;
+
+  /* ---------- ESPAÇAMENTO (base 4) ---------- */
+  --sp-0:0; --sp-1:.25rem; --sp-2:.5rem;  --sp-3:.75rem; --sp-4:1rem;
+  --sp-5:1.25rem; --sp-6:1.5rem; --sp-8:2rem; --sp-10:2.5rem;
+  --sp-12:3rem; --sp-16:4rem; --sp-20:5rem; --sp-24:6rem; --sp-32:8rem;
+
+  /* ---------- FORMA ---------- */
+  --r-none:0; --r-sm:4px; --r-md:8px; --r-lg:14px; --r-xl:22px; --r-pill:999px;
+  --bw-hair:1px; --bw-thick:2px;
+
+  /* ---------- ELEVAÇÃO ---------- */
+  --sh-1:0 1px 2px rgba(0,0,0,.45);
+  --sh-2:0 4px 14px rgba(0,0,0,.5);
+  --sh-3:0 14px 40px rgba(0,0,0,.6);
+  --sh-glow:0 0 0 1px rgba(255,209,120,.28), 0 8px 34px rgba(255,209,120,.16);
+
+  /* ---------- MOVIMENTO ---------- */
+  --dur-fast:130ms; --dur-base:220ms; --dur-slow:400ms;
+  --ease-out:cubic-bezier(.22,.9,.3,1);
+  --ease-in-out:cubic-bezier(.65,0,.35,1);
+
+  /* ---------- LAYOUT ---------- */
+  --maxw:1200px; --gutter:clamp(1rem,4vw,3rem);
+}
+
+/* ---------- TEMA CLARO ---------- */
+[data-theme="light"]{
+  --bg:var(--ink-050); --bg-elev:#FFFFFF; --bg-elev-2:#FFFFFF;
+  --surface-line:var(--ink-100);
+  --fg:var(--hly-black); --fg-muted:var(--ink-500); --fg-subtle:var(--ink-400);
+  /* --accent/--accent-fg/--focus vem da camada de campanha abaixo */
+  --sh-1:0 1px 2px rgba(0,0,0,.08); --sh-2:0 4px 14px rgba(0,0,0,.1);
+  --sh-3:0 14px 40px rgba(0,0,0,.14);
+  --sh-glow:0 0 0 1px rgba(0,0,0,.1), 0 8px 30px rgba(0,0,0,.12);
+}
+
+/* ---------- CAMPANHA ----------
+   A edicao vigente define o acento. Troque data-campaign no <html>/<body>
+   para virar a chave de um ano para o outro sem tocar em componente.     */
+[data-campaign="2026"],:root{
+  --bg:var(--c26-petroleo);
+  --bg-elev:#0E4C63;
+  --bg-elev-2:var(--c26-petroleo-escuro);
+  --surface-line:rgba(255,255,255,.20);
+  --fg:var(--hly-white);
+  --fg-muted:rgba(255,255,255,.78);
+  --fg-subtle:rgba(255,255,255,.58);
+  --accent:var(--hly-white);            /* o CTA da campanha e branco */
+  --accent-fg:var(--c26-petroleo);
+  --focus:var(--c26-ciano);
+  --sh-glow:0 0 0 1px rgba(255,255,255,.35), 0 8px 34px rgba(8,141,186,.28);
+}
+[data-campaign="2024"]{
+  --bg:var(--hly-black); --bg-elev:var(--ink-850); --bg-elev-2:var(--ink-800);
+  --surface-line:var(--ink-700);
+  --fg:var(--hly-white); --fg-muted:var(--ink-300); --fg-subtle:var(--ink-400);
+  --accent:var(--hly-gold); --accent-fg:var(--hly-black); --focus:var(--hly-gold);
+}
+[data-theme="light"][data-campaign="2026"],[data-theme="light"]{
+  --bg:var(--c26-areia-clara); --bg-elev:#FFFFFF; --bg-elev-2:#FFFFFF;
+  --surface-line:rgba(19,59,71,.16);
+  --fg:var(--c26-petroleo-escuro);
+  --fg-muted:rgba(19,59,71,.75); --fg-subtle:rgba(19,59,71,.55);
+  --accent:var(--c26-petroleo); --accent-fg:var(--hly-white);
+  --focus:var(--c26-petroleo);
+}
+[data-theme="light"][data-campaign="2024"]{
+  --bg:var(--ink-050); --accent:var(--hly-black); --accent-fg:var(--hly-white);
+  --fg:var(--hly-black); --focus:var(--hly-black);
+}
+
+/* ---------- TEMAS DE SUBMARCA ----------
+   Aplique data-brand no <body> ou em qualquer container.
+   Os componentes herdam --accent sem duplicar CSS.              */
+[data-brand="solidario"]{
+  /* rotulo PRETO: branco sobre o terracota-on-dark da so 4.22:1, preto da 4.70:1 */
+  --accent:var(--sub-solidario-on-dark); --accent-fg:var(--hly-black);
+  --accent-canon:var(--sub-solidario); --focus:var(--sub-solidario-on-dark);
+}
+[data-brand="pcd"]{
+  --accent:var(--sub-pcd-on-dark); --accent-fg:var(--hly-black);
+  --accent-canon:var(--sub-pcd); --focus:var(--sub-pcd-on-dark);
+}
+[data-brand="sustentabilidade"]{
+  --accent:var(--sub-sustentabilidade); --accent-fg:var(--hly-white);
+  --accent-canon:var(--sub-sustentabilidade); --focus:var(--sub-sustentabilidade);
+}
+[data-theme="light"][data-brand="solidario"],
+[data-theme="light"] [data-brand="solidario"]{--accent:var(--sub-solidario);--accent-fg:#fff}
+[data-theme="light"][data-brand="pcd"],
+[data-theme="light"] [data-brand="pcd"]{--accent:var(--sub-pcd);--accent-fg:#fff}
+
+/* ---------- SUBMARCA DENTRO DA CAMPANHA 2026 ----------
+   Sobre o petroleo, nenhuma variante -on-dark alcanca 4.5:1 (o fundo e claro
+   demais). Entao a submarca deixa de ser COR DE TEXTO e passa a ser
+   PREENCHIMENTO com branco por cima, que e onde os hex oficiais funcionam:
+   branco sobre #BF5820 = 4.53 · sobre #004C92 = 8.58.
+   O verde precisa escurecer para #028831 (4.60) porque o oficial da so 3.22. */
+[data-campaign="2026"] [data-brand="solidario"],
+[data-campaign="2026"][data-brand="solidario"]{
+  --accent:var(--sub-solidario); --accent-fg:var(--hly-white); --focus:var(--hly-white)}
+[data-campaign="2026"] [data-brand="pcd"],
+[data-campaign="2026"][data-brand="pcd"]{
+  --accent:var(--sub-pcd); --accent-fg:var(--hly-white); --focus:var(--hly-white)}
+[data-campaign="2026"] [data-brand="sustentabilidade"],
+[data-campaign="2026"][data-brand="sustentabilidade"]{
+  --accent:#028831; --accent-fg:var(--hly-white); --focus:var(--hly-white)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style><style>/* ============================================================
+   HALLELUYA — BIBLIOTECA DE COMPONENTES
+   Depende de tokens/tokens.css. Nenhum valor cru: tudo via token,
+   para que [data-brand] e [data-theme] retematizem sem duplicar CSS.
+
+   REGRA: use SEMPRE os tokens semanticos (--bg-elev, --bg-elev-2,
+   --fg, --fg-muted, --fg-subtle, --surface-line). NUNCA a escala
+   --ink-*: ela e a rampa neutra da logica preto-first de 2024 e
+   NAO responde a data-campaign nem a data-theme, entao vaza como
+   caixa preta sobre o petroleo e sobre o tema claro.
+   ============================================================ */
+
+/* ---------------- BOTÃO ---------------- */
+.hly-btn{
+  --_bg:var(--accent); --_fg:var(--accent-fg); --_bd:transparent;
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-2);
+  font-family:var(--font-brand);font-weight:var(--fw-bold);font-size:var(--fs-sm);
+  letter-spacing:var(--tr-wide);text-transform:uppercase;text-decoration:none;
+  padding:var(--sp-3) var(--sp-6);border-radius:var(--r-pill);min-height:44px;
+  background:var(--_bg);color:var(--_fg);border:var(--bw-thick) solid var(--_bd);
+  cursor:pointer;transition:transform var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out);
+  white-space:nowrap;
+}
+.hly-btn:hover{transform:translateY(-1px);box-shadow:var(--sh-2)}
+.hly-btn:active{transform:translateY(0)}
+.hly-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.hly-btn[disabled],.hly-btn[aria-disabled="true"]{
+  opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+
+.hly-btn--secondary{--_bg:transparent;--_fg:var(--fg);--_bd:var(--fg-subtle)}
+.hly-btn--secondary:hover{--_bd:var(--accent);--_fg:var(--accent)}
+.hly-btn--ghost{--_bg:transparent;--_fg:var(--fg-muted);--_bd:transparent;padding-inline:var(--sp-3)}
+.hly-btn--ghost:hover{--_fg:var(--accent);box-shadow:none}
+.hly-btn--danger{--_bg:var(--danger);--_fg:#fff}
+/* CTA da campanha 2026: pilula vazada. É assim que "ENTRADA GRATUITA" aparece nas peças. */
+.hly-btn--outline{--_bg:transparent;--_fg:var(--fg);--_bd:currentColor;font-weight:var(--fw-bold)}
+.hly-btn--outline:hover{--_bg:var(--fg);--_fg:var(--bg)}
+
+.hly-btn--sm{font-size:var(--fs-2xs);padding:var(--sp-2) var(--sp-4);min-height:32px}
+.hly-btn--lg{font-size:var(--fs-md);padding:var(--sp-4) var(--sp-8);min-height:56px}
+.hly-btn--block{display:flex;width:100%}
+
+.hly-btn[data-loading="true"]{pointer-events:none;opacity:.75}
+.hly-btn[data-loading="true"]::before{
+  content:"";width:.9em;height:.9em;border-radius:50%;
+  border:2px solid currentColor;border-top-color:transparent;
+  animation:hly-spin .7s linear infinite}
+@keyframes hly-spin{to{transform:rotate(360deg)}}
+
+/* ---------------- BADGE ---------------- */
+.hly-badge{
+  display:inline-flex;align-items:center;gap:var(--sp-1);
+  font-size:var(--fs-3xs);font-weight:var(--fw-bold);letter-spacing:var(--tr-wide);
+  text-transform:uppercase;padding:.3em .75em;border-radius:var(--r-pill);
+  background:var(--bg-elev-2);color:var(--fg-muted);border:1px solid var(--surface-line)}
+.hly-badge--accent{background:var(--accent);color:var(--accent-fg);border-color:transparent}
+.hly-badge--outline{background:transparent;color:var(--accent);border-color:currentColor}
+.hly-badge--ok{background:transparent;color:var(--ok-on-dark);border-color:currentColor}
+.hly-badge--warn{background:transparent;color:var(--warn-on-dark);border-color:currentColor}
+.hly-badge--danger{background:transparent;color:var(--danger-on-dark);border-color:currentColor}
+.hly-badge--esgotado{background:var(--bg-elev-2);color:var(--fg-subtle);
+  border-color:var(--surface-line);text-decoration:line-through}
+
+/* ---------------- CARD ---------------- */
+.hly-card{
+  background:var(--bg-elev);border:1px solid var(--surface-line);
+  border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;
+  transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out)}
+.hly-card--link:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:var(--accent)}
+.hly-card__media{position:relative;aspect-ratio:4/5;background:var(--bg-elev-2);overflow:hidden}
+.hly-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+.hly-card__media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.1) 55%,transparent 100%)}
+.hly-card__overlay{position:absolute;left:var(--sp-4);right:var(--sp-4);bottom:var(--sp-4);z-index:1}
+.hly-card__body{padding:var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-2);flex:1}
+.hly-card__title{font-size:var(--fs-xl);font-weight:var(--fw-black);line-height:var(--lh-snug);
+  letter-spacing:var(--tr-tight);margin:0;color:var(--fg)}
+.hly-card__meta{font-size:var(--fs-2xs);letter-spacing:var(--tr-wide);text-transform:uppercase;
+  color:var(--accent);font-weight:var(--fw-bold);margin:0}
+.hly-card__text{font-size:var(--fs-sm);color:var(--fg-muted);margin:0}
+.hly-card__footer{margin-top:auto;padding-top:var(--sp-4);display:flex;
+  align-items:center;justify-content:space-between;gap:var(--sp-3)}
+
+/* Card de lote / ingresso */
+.hly-lote{border:1px solid var(--surface-line);border-radius:var(--r-lg);
+  padding:var(--sp-6);background:var(--bg-elev);display:flex;flex-direction:column;
+  /* sem isto, um filho inline-flex (o badge) estica na largura toda.
+     --block continua funcionando: ele tem width:100% explicito. */
+  align-items:flex-start;gap:var(--sp-2)}
+.hly-lote[data-state="ativo"]{border-color:var(--accent);box-shadow:var(--sh-glow)}
+.hly-lote[data-state="esgotado"]{opacity:.55}
+.hly-lote__preco{font-size:var(--fs-3xl);font-weight:var(--fw-black);
+  letter-spacing:var(--tr-tight);color:var(--fg);line-height:1}
+.hly-lote__preco small{font-size:var(--fs-sm);font-weight:var(--fw-medium);color:var(--fg-subtle)}
+
+/* ---------------- CAMPO ---------------- */
+.hly-field{display:flex;flex-direction:column;gap:var(--sp-2)}
+.hly-field__label{font-size:var(--fs-2xs);font-weight:var(--fw-bold);
+  letter-spacing:var(--tr-wide);text-transform:uppercase;color:var(--fg-muted)}
+.hly-field__label[data-required]::after{content:" *";color:var(--danger-on-dark)}
+.hly-input{
+  font-family:var(--font-brand);font-size:var(--fs-md);color:var(--fg);
+  background:var(--bg-elev-2);border:1px solid var(--surface-line);
+  border-radius:var(--r-md);padding:var(--sp-3) var(--sp-4);width:100%;
+  transition:border-color var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
+.hly-input::placeholder{color:var(--fg-subtle)}
+.hly-input:hover{border-color:var(--fg-subtle)}
+.hly-input:focus{outline:none;border-color:var(--accent);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.hly-input[aria-invalid="true"]{border-color:var(--danger-on-dark)}
+.hly-input[disabled]{opacity:.45;cursor:not-allowed}
+.hly-field__hint{font-size:var(--fs-xs);color:var(--fg-subtle);margin:0}
+.hly-field__error{font-size:var(--fs-xs);color:var(--danger-on-dark);margin:0;font-weight:var(--fw-medium)}
+
+/* ---------------- SÍMBOLO / STICKER ---------------- */
+.hly-sticker{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;
+  background:var(--accent);color:var(--accent-fg);font-weight:var(--fw-black);
+  font-size:var(--fs-2xs);letter-spacing:var(--tr-wide);text-transform:uppercase;
+  border:var(--bw-thick) solid var(--accent-fg)}
+</style><style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0B5C77;color:#fff;font-family:'Fivo Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#55C3DE}
+a:hover{color:#fff}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+</style></head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="Root"><div data-campaign="2026" style="background: var(--bg); color: var(--fg); font-family: var(--font-brand); min-height: 100vh;">
+<header style="position: sticky; top: 0px; z-index: 20; background: rgba(19, 59, 71, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--surface-line);">
+<div style="max-width: var(--maxw); margin: 0px auto; padding: var(--sp-3) var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);">
+<a href="#topo" style="display: flex; align-items: center; gap: var(--sp-3); color: var(--fg); text-decoration: none;">
+<img alt="Halleluya" decoding="async" src="assets/f565bd92a5.png" style="height: 30px; width: auto; display: block;"/>
+<span style="width: 1px; height: 22px; background: var(--surface-line);"></span>
+<span style="font-weight: var(--fw-black); font-size: var(--fs-lg); letter-spacing: var(--tr-tight);">Conexão</span>
+</a>
+<nav style="display: flex; align-items: center; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--ghost hly-btn--sm" href="#encontro">O encontro</a>
+<a class="hly-btn hly-btn--outline hly-btn--sm" href="#centros">Encontre seu centro</a>
+</nav>
+</div>
+</header>
+<section data-screen-label="Hero" id="topo" style="position: relative; overflow: hidden; min-height: min(92vh, 860px); display: flex; align-items: center;">
+<img alt="" decoding="async" sizes="100vw" src="assets/41ddd16fbd-1600.webp" srcset="assets/41ddd16fbd-640.webp 640w, assets/41ddd16fbd-1024.webp 1024w, assets/41ddd16fbd-1600.webp 1600w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;"/>
+<img alt="" decoding="async" sizes="100vw" src="assets/5ff7d8fc4c-480.webp" srcset="assets/5ff7d8fc4c-480.webp 480w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;"/>
+<div style="position: relative; width: 100%; max-width: var(--maxw); margin: 0px auto; padding: var(--sp-20) var(--gutter) var(--sp-16); display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-6);">
+<p style="margin: 0px; font-size: var(--fs-xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--fg-muted);">Conexão · Reencontro Halleluya Rio</p>
+<h1 style="margin: 0px; font-weight: var(--fw-black); font-size: clamp(3.25rem, 10.5vw, 9rem); line-height: 0.9; letter-spacing: -0.035em; text-wrap: balance; max-width: 11ch;">A festa que nunca acaba</h1>
+<p style="margin: 0px; font-weight: var(--fw-light); font-size: clamp(2rem, 5vw, 4rem); line-height: 1; letter-spacing: var(--tr-tight); color: var(--c26-ciano);">perto de você.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-4); margin-top: var(--sp-4);">
+<a class="hly-btn hly-btn--outline hly-btn--lg" href="#centros">Entrada gratuita</a>
+<span style="font-size: var(--fs-lg); font-weight: var(--fw-bold); letter-spacing: var(--tr-wide); text-transform: uppercase;">31 out · 1º nov</span>
+</div>
+<div style="margin-top: var(--sp-10); display: flex; flex-direction: column; gap: var(--sp-4);">
+<span id="cd-label" style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--fg-muted);">Faltam para o Conexão</span>
+<div id="cd-units" style="display: flex; align-items: stretch; border: var(--bw-thick) solid var(--fg); border-radius: var(--r-xl); overflow: hidden; background: rgba(19, 59, 71, 0.35); backdrop-filter: blur(6px);">
+<div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); padding: var(--sp-5) clamp(.75rem,2.5vw,var(--sp-8)); min-width: clamp(4.5rem, 12vw, 8.5rem); border-left-width: medium; border-left-style: none; border-left-color: currentcolor;">
+<span data-cd="" style="font-weight: var(--fw-black); font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1; letter-spacing: var(--tr-tight); font-variant-numeric: tabular-nums;">24</span>
+<span style="font-size: var(--fs-3xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">dias</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); padding: var(--sp-5) clamp(.75rem,2.5vw,var(--sp-8)); min-width: clamp(4.5rem, 12vw, 8.5rem); border-left: 1px solid var(--surface-line);">
+<span data-cd="" style="font-weight: var(--fw-black); font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1; letter-spacing: var(--tr-tight); font-variant-numeric: tabular-nums;">02</span>
+<span style="font-size: var(--fs-3xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">horas</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); padding: var(--sp-5) clamp(.75rem,2.5vw,var(--sp-8)); min-width: clamp(4.5rem, 12vw, 8.5rem); border-left: 1px solid var(--surface-line);">
+<span data-cd="" style="font-weight: var(--fw-black); font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1; letter-spacing: var(--tr-tight); font-variant-numeric: tabular-nums;">08</span>
+<span style="font-size: var(--fs-3xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">min</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); padding: var(--sp-5) clamp(.75rem,2.5vw,var(--sp-8)); min-width: clamp(4.5rem, 12vw, 8.5rem); border-left: 1px solid var(--surface-line);">
+<span data-cd="" style="font-weight: var(--fw-black); font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1; letter-spacing: var(--tr-tight); font-variant-numeric: tabular-nums;">37</span>
+<span style="font-size: var(--fs-3xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">seg</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section data-screen-label="Info" style="background: var(--c26-petroleo-escuro);">
+<div style="max-width: var(--maxw); margin: 0px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));">
+<div style="padding: var(--sp-8) var(--gutter); display: flex; flex-direction: column; gap: var(--sp-1); border-right: 1px solid var(--surface-line);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">Sábado · 31/10</span>
+<span style="font-size: var(--fs-3xl); font-weight: var(--fw-black); letter-spacing: var(--tr-tight);">a partir das 14h</span>
+</div>
+<div style="padding: var(--sp-8) var(--gutter); display: flex; flex-direction: column; gap: var(--sp-1); border-right: 1px solid var(--surface-line);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-ciano);">Domingo · 01/11</span>
+<span style="font-size: var(--fs-3xl); font-weight: var(--fw-black); letter-spacing: var(--tr-tight);">a partir das 9h</span>
+</div>
+</div>
+</section>
+<section data-screen-label="O encontro" id="encontro" style="position: relative; overflow: hidden; padding: var(--sp-24) 0;">
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/41ddd16fbd-1600.webp" srcset="assets/41ddd16fbd-640.webp 640w, assets/41ddd16fbd-1024.webp 1024w, assets/41ddd16fbd-1600.webp 1600w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1);"/>
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/5ff7d8fc4c-480.webp" srcset="assets/5ff7d8fc4c-480.webp 480w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0.7;"/>
+<div style="position: relative; max-width: var(--maxw); margin: 0px auto; padding: 0 var(--gutter); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: var(--sp-12); align-items: center;">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-6);">
+<span class="hly-badge hly-badge--outline">O encontro</span>
+<h2 style="margin: 0px; font-weight: var(--fw-black); font-size: clamp(2.5rem, 5.5vw, 4.5rem); line-height: var(--lh-tight); letter-spacing: var(--tr-tight); text-wrap: balance;">O festival passou. A festa continua.</h2>
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-loose); color: var(--fg-muted); text-wrap: pretty; max-width: 52ch;">O Conexão é o reencontro de quem viveu o Halleluya Rio. Durante um fim de semana, os Centros de Evangelização Shalom abrem as portas para louvor, pregação, oração e partilha, para continuar o caminho que começou na Praia do Guido.</p>
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-loose); color: var(--fg-muted); text-wrap: pretty; max-width: 52ch;">Escolha o centro mais perto de você e chegue. A entrada é gratuita e não precisa de inscrição.</p>
+<a class="hly-btn hly-btn--outline" href="#centros">Ver os centros</a>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: var(--sp-3);">
+<div class="hly-card__media" style="border-radius: var(--r-lg); grid-row: span 2; aspect-ratio: auto;"><img alt="Crianças e jovens com as mãos levantadas sob as luzes" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/93e492e00c-1600.webp" srcset="assets/93e492e00c-640.webp 640w, assets/93e492e00c-1024.webp 1024w, assets/93e492e00c-1600.webp 1600w"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 1 / 1;"><img alt="Cinco mulheres posando sob varal de lâmpadas" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/e780e31b36-1333.webp" srcset="assets/e780e31b36-640.webp 640w, assets/e780e31b36-1024.webp 1024w, assets/e780e31b36-1333.webp 1333w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 1 / 1;"><img alt="Ostensório no palco à noite, luz quente" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/b15cc67c9e-1600.webp" srcset="assets/b15cc67c9e-640.webp 640w, assets/b15cc67c9e-1024.webp 1024w, assets/b15cc67c9e-1600.webp 1600w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+</div>
+</div>
+<div style="position: relative; margin-top: var(--sp-20); display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 22vw); gap: var(--sp-3); padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none;">
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Grupo de jovens com as mãos levantadas e celulares" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/f68620d506-1600.webp" srcset="assets/f68620d506-640.webp 640w, assets/f68620d506-1024.webp 1024w, assets/f68620d506-1600.webp 1600w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Cantor de braços abertos no palco, luz quente" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/1f9a3cadab-1600.webp" srcset="assets/1f9a3cadab-640.webp 640w, assets/1f9a3cadab-1024.webp 1024w, assets/1f9a3cadab-1600.webp 1600w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Multidão de costas, mar ao fundo" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/f11715731e-1600.webp" srcset="assets/f11715731e-640.webp 640w, assets/f11715731e-1024.webp 1024w, assets/f11715731e-1600.webp 1600w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Mulher de braços abertos no meio do público" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/1ea3859544-1333.webp" srcset="assets/1ea3859544-640.webp 640w, assets/1ea3859544-1024.webp 1024w, assets/1ea3859544-1333.webp 1333w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Jovem de braço erguido no meio do público, à noite" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/721faa9f81-1333.webp" srcset="assets/721faa9f81-640.webp 640w, assets/721faa9f81-1024.webp 1024w, assets/721faa9f81-1333.webp 1333w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+<div style="border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 5;"><img alt="Público de costas à noite, palco iluminado ao fundo" decoding="async" loading="lazy" sizes="(max-width: 700px) 100vw, 50vw" src="assets/16371b933b-1600.webp" srcset="assets/16371b933b-640.webp 640w, assets/16371b933b-1024.webp 1024w, assets/16371b933b-1600.webp 1600w" style="width: 100%; height: 100%; object-fit: cover; display: block;"/></div>
+</div>
+</section>
+<section data-campaign="2026" data-screen-label="Centros" data-theme="light" id="centros" style="position: relative; overflow: hidden; background: var(--bg); color: var(--fg); padding: var(--sp-24) var(--gutter);">
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/89a5cdd6db-1600.webp" srcset="assets/89a5cdd6db-640.webp 640w, assets/89a5cdd6db-1024.webp 1024w, assets/89a5cdd6db-1600.webp 1600w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0.35;"/>
+<div style="position: relative; max-width: var(--maxw); margin: 0px auto; display: flex; flex-direction: column; gap: var(--sp-10);">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-4);">
+<span class="hly-badge hly-badge--outline">Centros de Evangelização Shalom</span>
+<h2 style="margin: 0px; font-weight: var(--fw-black); font-size: clamp(2.5rem, 5.5vw, 4.5rem); line-height: var(--lh-tight); letter-spacing: var(--tr-tight);">Encontre o seu Conexão</h2>
+<p style="margin: 0px; font-size: var(--fs-lg); color: var(--fg-muted);">Em todos os centros: sábado 31/10 a partir das 14h e domingo 01/11 a partir das 9h.</p>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--fg);">
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Sul · Catete</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Catete</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Rua Bento Lisboa, 112 – Catete</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Bento%20Lisboa%2C%20112%20%E2%80%93%20Catete%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+<a class="hly-btn hly-btn--secondary hly-btn--sm" href="tel:+5521980832169">(21) 98083-2169</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Segunda – 17h30</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sexta – 18h</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 15h30</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Domingo – 11h</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Última quinta do mês – Missa por Cura às 20h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Terça às 20h – Grupo de casais e kids</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta às 20h – Noite de louvor / Grupo de oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado às 17h – Grupo jovem</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Tarde da misericórdia</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta – a partir das 15h</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Norte · Tijuca</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Tijuca</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Rua Alzira Brandão, 304 – Tijuca</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Alzira%20Brand%C3%A3o%2C%20304%20%E2%80%93%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+<a class="hly-btn hly-btn--secondary hly-btn--sm" href="tel:+5521996311962">(21) 99631-1962</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 18h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração – Adulto</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta – 20h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Noite de Louvor – Adoração ao Santíssimo</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta – 20h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração – Jovem e Adulto</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Norte · Irajá</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Vigário Geral</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Shopping Via Brasil, Capela São João Paulo II – Rua Itapera, 500 – Irajá</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Shopping%20Via%20Brasil%2C%20Capela%20S%C3%A3o%20Jo%C3%A3o%20Paulo%20II%20%E2%80%93%20Rua%20Itapera%2C%20500%20%E2%80%93%20Iraj%C3%A1%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Terça e sexta – 12h</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Domingo – 16h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Quinta da Paz</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta – 20h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 17h</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Oeste · Curicica</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Jacarepaguá</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Rua das Pêras, 2 – Curicica</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20das%20P%C3%AAras%2C%202%20%E2%80%93%20Curicica%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Domingo – 11h</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Última quinta do mês – Missa por Cura às 19h30</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado às 16h</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Oeste · Recreio</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Recreio</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Cond. Village Marapendi – Rua Theodorino Rodrigues Pereira, 30 – Recreio</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cond.%20Village%20Marapendi%20%E2%80%93%20Rua%20Theodorino%20Rodrigues%20Pereira%2C%2030%20%E2%80%93%20Recreio%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 17h</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Último sábado do mês – Missa por Cura – 17h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Terça, 19h30</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Oeste · Recreio</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Quiosque do Guido</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Praia do Guido – Recreio dos Bandeirantes</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Quiosque%20do%20Guido%20Recreio%20dos%20Bandeirantes" rel="noopener" target="_blank">Como chegar</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Missa</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quarta, sábado e domingo às 9h</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--sp-4) var(--sp-8); padding: var(--sp-8) 0; border-bottom: 1px solid var(--surface-line); align-items: start;">
+<div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Zona Oeste · Campo Grande</span>
+<h3 style="margin: 0px; font-weight: var(--fw-black); font-size: var(--fs-3xl); letter-spacing: var(--tr-tight); line-height: var(--lh-tight);">Shalom Campo Grande</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<p style="margin: 0px; font-size: var(--fs-lg); line-height: var(--lh-normal);">Rua do Petróleo, 125 – Campo Grande</p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20do%20Petr%C3%B3leo%2C%20125%20%E2%80%93%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ" rel="noopener" target="_blank">Como chegar</a>
+</div>
+<details style="border-top: 1px solid var(--surface-line); padding-top: var(--sp-3);">
+<summary style="font-size: var(--fs-xs); letter-spacing: var(--tr-wide); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--c26-petroleo);">Programação regular do centro +</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-4);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Quinta – 19h30</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração Jovem</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 16h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Grupo de Oração Adulto</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Sábado – 17h</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-1);">
+<span style="font-weight: var(--fw-bold); font-size: var(--fs-md);">Noite de Louvor</span>
+<span style="font-size: var(--fs-sm); color: var(--fg-muted); line-height: var(--lh-normal);">Toda segunda quinta-feira do mês às 19h30</span>
+</div>
+</div>
+</details>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section data-screen-label="Faixa Guido" style="position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); background: var(--c26-petroleo-escuro);">
+<div style="position: relative; overflow: hidden; min-height: 340px; order: 2;">
+<img alt="Letreiro do Quiosque do Guido" decoding="async" loading="lazy" sizes="100vw" src="assets/906fd9f641-1120.webp" srcset="assets/906fd9f641-640.webp 640w, assets/906fd9f641-1024.webp 1024w, assets/906fd9f641-1120.webp 1120w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 30% center;"/>
+</div>
+<div style="position: relative; overflow: hidden; padding: var(--sp-20) var(--gutter); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--sp-6);">
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/41ddd16fbd-1600.webp" srcset="assets/41ddd16fbd-640.webp 640w, assets/41ddd16fbd-1024.webp 1024w, assets/41ddd16fbd-1600.webp 1600w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;"/>
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/5ff7d8fc4c-480.webp" srcset="assets/5ff7d8fc4c-480.webp 480w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;"/>
+<div style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-6);">
+<h2 style="margin: 0px; font-weight: var(--fw-black); font-size: clamp(2.5rem, 6vw, 5rem); line-height: var(--lh-tight); letter-spacing: var(--tr-tight); max-width: 14ch; text-wrap: balance;">Começou na praia. Continua perto de casa.</h2>
+<a class="hly-btn hly-btn--outline hly-btn--lg" href="#centros">Entrada gratuita</a>
+</div>
+</div>
+</section>
+<footer style="position: relative; overflow: hidden; background: var(--c26-petroleo-escuro); padding: var(--sp-16) var(--gutter);">
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/41ddd16fbd-1600.webp" srcset="assets/41ddd16fbd-640.webp 640w, assets/41ddd16fbd-1024.webp 1024w, assets/41ddd16fbd-1600.webp 1600w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center bottom;"/>
+<img alt="" decoding="async" loading="lazy" sizes="100vw" src="assets/5ff7d8fc4c-480.webp" srcset="assets/5ff7d8fc4c-480.webp 480w" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;"/>
+<div style="position: relative; max-width: var(--maxw); margin: 0px auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--sp-10);">
+<div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+<img alt="Halleluya" decoding="async" loading="lazy" src="assets/f565bd92a5.png" style="height: 44px; width: auto; align-self: flex-start;"/>
+<span style="color: var(--fg-muted); font-size: var(--fs-sm);">Conexão · Reencontro Halleluya Rio · Comunidade Católica Shalom</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+<span style="font-size: var(--fs-2xs); letter-spacing: var(--tr-wider); text-transform: uppercase; font-weight: var(--fw-bold); color: var(--fg-muted);">Siga</span>
+<div style="display: flex; flex-wrap: wrap; gap: var(--sp-2);">
+<a class="hly-btn hly-btn--secondary hly-btn--sm" href="https://instagram.com/halleluyario" rel="noopener" target="_blank">Instagram @halleluyario</a>
+<a class="hly-btn hly-btn--secondary hly-btn--sm" href="https://instagram.com/shalomrio" rel="noopener" target="_blank">Instagram @shalomrio</a>
+<a class="hly-btn hly-btn--secondary hly-btn--sm" href="https://comshalom.org" rel="noopener" target="_blank">comshalom.org</a>
+</div>
+</div>
+</div>
+</footer></div></div></div>
+
+<script>(function(){var A=Date.parse('2026-10-31T14:00:00-03:00'),F=Date.parse('2026-11-01T23:59:00-03:00'),v=document.querySelectorAll('[data-cd]'),L=document.getElementById('cd-label'),U=document.getElementById('cd-units');function p(n){return String(n).padStart(2,'0')}function t(){var n=Date.now(),d=A-n;if(d>0){var x=[Math.floor(d/864e5),Math.floor(d/36e5)%24,Math.floor(d/6e4)%60,Math.floor(d/1e3)%60];for(var i=0;i<4;i++)v[i].textContent=p(x[i]);return}clearInterval(h);L.textContent=n<F?'Agora':'Obrigado';var s=document.createElement('span');s.style.cssText='font-weight:var(--fw-black);font-size:clamp(2.25rem,6vw,4.5rem);line-height:1;letter-spacing:var(--tr-tight)';s.textContent=n<F?'Acontecendo':'Até a próxima';U.replaceWith(s)}var h=setInterval(t,1000);t()})();</script></body></html>
